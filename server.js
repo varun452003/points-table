@@ -11,11 +11,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB (replace <YOUR_MONGODB_URI> below)
-mongoose.connect('mongodb+srv://varunkumarkgowda204:zlLn0dQJMaZvsG6P@cluster24.8kqgu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster24', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('MongoDB connection error:', err));
+mongoose
+  .connect(
+    "mongodb+srv://varunkumarkgowda204:xgB3DBTBvwxsd8rD@cluster0.koz4szm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  )
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 // Define a Match schema
 const matchSchema = new mongoose.Schema({
